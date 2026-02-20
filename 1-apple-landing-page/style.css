@@ -113,7 +113,6 @@ body {
   position: sticky;
   inset-block-start: 0;
   font-size: 0.75rem;
-  margin-block-end: 2rem;
   display: flex;
   align-items: center;
 }
@@ -202,6 +201,64 @@ body {
   background-color: var(--color-white);
 }
 
+.main-banner {
+  inline-size: 100%;
+  background-image: url("https://mir-s3-cdn-cf.behance.net/project_modules/max_3840_webp/34b5bf180145769.6505ae7623131.jpg");
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center;
+  block-size: 31.25rem;
+  display: flex;
+  align-items: end;
+  justify-content: center;
+  text-align: center;
+  padding-bottom: 2.5rem;
+  position: relative;
+  color: var(--color-bg-page);
+}
+
+.main-banner::before {
+  content: "";
+  background-color: var(--color-bg-overlay-strong);
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(to top, rgba(0, 0, 0, 1), transparent);
+  z-index: 1;
+}
+
+.banner-content {
+  position: relative;
+  z-index: 1;
+
+  width: 100%;
+  max-inline-size: 50rem;
+}
+
+.banner-title {
+  font-size: 2.188rem;
+  margin-block-end: 0.625rem;
+}
+.banner-description {
+  font-size: 1.125rem;
+  margin-block-end: 1.25rem;
+}
+.banner-links {
+  display: flex;
+  justify-content: center;
+  gap: 1.563rem;
+  font-size: 1.563rem;
+  color: var(--color-accent-primary);
+}
+
+.banner-links a {
+  display: flex;
+  align-items: center;
+}
+
+.banner-links a:hover {
+  text-decoration: underline;
+}
+
 /* footer */
 #footer {
 }
@@ -233,6 +290,15 @@ body {
 
   .header-navigation ul li a:hover {
     color: var(--color-text-light);
+  }
+
+  /* main */
+
+  .banner-title {
+    font-size: 3.5rem;
+  }
+  .banner-description {
+    font-size: 1.5rem;
   }
 }
 
