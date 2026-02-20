@@ -47,6 +47,8 @@
      Effects
   ================================== */
   --shadow-soft: 0 4px 10px oklch(0% 0 0 / 0.04);
+
+  --color-bg-product: oklch(92.854% 0.00278 285.783);
 }
 
 *,
@@ -237,7 +239,10 @@ body {
 .banner-title {
   font-size: 2.188rem;
   margin-block-end: 0.625rem;
+  letter-spacing: -0.5;
+  line-height: 1.1;
 }
+
 .banner-description {
   font-size: 1.125rem;
   margin-block-end: 1.25rem;
@@ -257,6 +262,63 @@ body {
 
 .banner-links a:hover {
   text-decoration: underline;
+}
+
+.products-section {
+  padding-block: 2.5rem;
+  padding-inline: 0;
+  border-bottom: 1px solid var(--color-border-light);
+}
+
+.products-headline {
+  font-size: 1.75rem;
+  font-weight: 600;
+  margin-bottom: 1.25rem;
+}
+
+.products-slider {
+  display: flex;
+  overflow-x: auto;
+  scrollbar-width: none;
+  margin-bottom: 1.75rem;
+  gap: 1.25rem;
+}
+
+.products-slider::-webkit-scrollbar {
+  display: none;
+}
+
+.product-card {
+  min-width: 16.25rem;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 1.53rem;
+  background-color: var(--color-bg-product);
+  border-radius: 1.125rem;
+  box-shadow: var(--shadow-soft);
+}
+.product-card-img {
+  inline-size: 11.25rem;
+  block-size: 11.25rem;
+  object-fit: contain;
+  margin-block-end: 1.25rem;
+}
+
+.product-card-category {
+  color: var(--color-accent-secondary);
+  margin-block-end: 0.313rem;
+  font-size: 0.75rem;
+  font-weight: 600;
+  text-transform: uppercase;
+}
+.product-card-title {
+  margin-block-end: 0.313rem;
+  font-size: 1.25;
+  font-weight: 600;
+}
+.product-card-price {
+  font-size: 0.938rem;
 }
 
 /* footer */
