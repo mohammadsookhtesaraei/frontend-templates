@@ -1,0 +1,128 @@
+@import url("https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100..900;1,100..900&display=swap");
+
+:root {
+
+  /* ==================================
+     Base
+  ================================== */
+  --color-white: oklch(100% 0 0);
+  --color-black: oklch(0% 0 0);
+
+  /* ==================================
+     Page Background
+  ================================== */
+  --color-bg-page: oklch(97.072% 0.00276 285.755);
+
+  /* ==================================
+     Surfaces
+  ================================== */
+  --color-bg-surface: oklch(100% 0 0);
+  --color-bg-surface-muted: oklch(92.3% 0.008 275);
+  --color-bg-header: oklch(0% 0 0 / 0.9);
+  --color-bg-overlay-strong: oklch(0% 0 0);
+
+  /* ==================================
+     Text
+  ================================== */
+  --color-text-primary: oklch(18.2% 0.006 275);
+  --color-text-dark-alt: oklch(17.6% 0.008 98);
+  --color-text-secondary: oklch(53.5% 0.015 275);
+  --color-text-muted: oklch(84.3% 0.002 0);
+  --color-text-light: oklch(96.8% 0.006 275);
+  --color-text-header: oklch(92.5% 0.010 275);
+  --color-text-inverse: oklch(100% 0 0);
+
+  /* ==================================
+     Borders
+  ================================== */
+  --color-border-light: oklch(86.4% 0.012 275);
+  --color-border-default: oklch(84.3% 0.002 0);
+
+  /* ==================================
+     Brand / Accent
+  ================================== */
+  --color-accent-primary: oklch(67.8% 0.185 251);
+  --color-accent-secondary: oklch(63.5% 0.170 45);
+
+  /* ==================================
+     Effects
+  ================================== */
+  --shadow-soft: 0 4px 10px oklch(0% 0 0 / 0.04);
+
+}
+
+
+*,
+::before,
+::after {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+
+
+input,
+label,
+select,
+textarea,
+button,
+fieldset,
+legend,
+datalist,
+output,
+option,
+optgroup {
+    font: inherit;
+}
+
+ul {
+    list-style: none;
+}
+
+a {
+    color: inherit;
+    text-decoration: none;
+}
+
+img {
+  max-inline-size: 100%;
+  display: block;
+  object-fit: cover;
+}
+
+body {
+    font-family: 'Roboto',sans-serif;
+    line-height: 1.5;
+    font-style: normal;
+    background-color: var(--color-bg-page);
+    display: flex;
+    flex-direction: column;
+}
+
+
+/* header */
+#header {
+
+}
+
+
+
+
+
+
+
+/* main */
+#main {
+    flex: 1;
+    background-color: var(--color-white);
+}
+
+
+/* footer */
+#footer {
+    
+}
+
+
+/* media queries */
