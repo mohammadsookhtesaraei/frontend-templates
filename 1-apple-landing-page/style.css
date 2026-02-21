@@ -1,54 +1,29 @@
 @import url("https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100..900;1,100..900&display=swap");
 
 :root {
-  /* ==================================
-     Base
-  ================================== */
   --color-white: oklch(100% 0 0);
   --color-black: oklch(0% 0 0);
 
-  /* ==================================
-     Page Background
-  ================================== */
   --color-bg-page: oklch(97.072% 0.00276 285.755);
 
-  /* ==================================
-     Surfaces
-  ================================== */
-  --color-bg-surface: oklch(100% 0 0);
-  --color-bg-surface-muted: oklch(92.3% 0.008 275);
   --color-bg-header: oklch(0% 0 0 / 0.9);
   --color-bg-overlay-strong: oklch(0% 0 0);
 
-  /* ==================================
-     Text
-  ================================== */
   --color-text-primary: oklch(18.2% 0.006 275);
   --color-text-dark-alt: oklch(17.6% 0.008 98);
-  --color-text-secondary: oklch(53.5% 0.015 275);
-  --color-text-muted: oklch(84.3% 0.002 0);
+
   --color-text-light: oklch(96.8% 0.006 275);
   --color-text-header: oklch(92.5% 0.01 275);
-  --color-text-inverse: oklch(100% 0 0);
 
-  /* ==================================
-     Borders
-  ================================== */
   --color-border-light: oklch(86.4% 0.012 275);
-  --color-border-default: oklch(84.3% 0.002 0);
 
-  /* ==================================
-     Brand / Accent
-  ================================== */
   --color-accent-primary: oklch(67.8% 0.185 251);
   --color-accent-secondary: oklch(63.5% 0.17 45);
 
-  /* ==================================
-     Effects
-  ================================== */
   --shadow-soft: 0 4px 10px oklch(0% 0 0 / 0.04);
 
   --color-bg-product: oklch(92.854% 0.00278 285.783);
+  --color-footer: oklch(53.99% 0.00776 286.028);
 }
 
 *,
@@ -117,6 +92,7 @@ body {
   font-size: 0.75rem;
   display: flex;
   align-items: center;
+  z-index: 99;
 }
 
 .header-content {
@@ -405,6 +381,40 @@ body {
 
 /* footer */
 #footer {
+  padding: 2.5rem;
+  color: var(oklch(53.99% 0.00776 286.028));
+  font-size: 0.75rem;
+  border-top: 1px solid var(--color-border-light);
+}
+
+.footer-content {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 1.25rem;
+  margin-block-end: 1.875rem;
+}
+.footer-col {
+}
+
+.footer-col h4 {
+  color: var(--color-black);
+  font-weight: 600;
+  margin-block-end: 0.625rem;
+}
+
+.footer-col ul li {
+  margin-block-end: 0.5rem;
+}
+.footer-bottom {
+  border-top: 1px solid var(--color-border-light);
+  padding-top: 1.25rem;
+  display: flex;
+  flex-direction: column;
+  gap: 0.625rem;
+}
+
+.footer-bottom p {
+  text-transform: capitalize;
 }
 
 /* media queries */
@@ -456,11 +466,22 @@ body {
 
 /* laptop */
 @media screen and (min-width: 640px) {
+  .footer-content {
+    grid-template-columns: repeat(2, 1fr);
+  }
+
+  .footer-bottom {
+    flex-direction: row;
+  }
 }
 
 /* desktop */
 @media screen and (min-width: 768px) {
   .explore-content {
+    grid-template-columns: repeat(3, 1fr);
+  }
+
+  .footer-content {
     grid-template-columns: repeat(3, 1fr);
   }
 }
@@ -472,6 +493,9 @@ body {
   }
   .article-content {
     grid-template-columns: repeat(3, 1fr);
+  }
+  .footer-content {
+    grid-template-columns: repeat(4, 1fr);
   }
 }
 
