@@ -321,9 +321,8 @@ body {
   font-size: 0.938rem;
 }
 
-
 .explore-section {
-   padding-block: 2.5rem;
+  padding-block: 2.5rem;
   padding-inline: 0;
   border-bottom: 1px solid var(--color-border-light);
 }
@@ -333,22 +332,75 @@ body {
   margin-bottom: 1.25rem;
 }
 .explore-content {
-display: grid;
-grid-template-columns: 1fr;
-margin-block-start: 1.25rem;
-gap: 1.563rem;
+  display: grid;
+  grid-template-columns: 1fr;
+  margin-block-start: 1.25rem;
+  gap: 1.563rem;
 }
 .explore-card {
   block-size: 15.625rem;
-background-color: var(--color-black);
-border-radius: 1.125rem;
-overflow: hidden;
+  background-color: var(--color-black);
+  border-radius: 1.125rem;
+  overflow: hidden;
 }
 
 .explore-card-img {
   inline-size: 100%;
   block-size: 100%;
   object-fit: cover;
+}
+
+.article-section {
+  padding-block: 2.5rem;
+  padding-inline: 0;
+  border-bottom: 1px solid var(--color-border-light);
+}
+
+.article-section-headline {
+  font-size: 1.75rem;
+  font-weight: 600;
+  margin-bottom: 1.25rem;
+}
+.article-content {
+  background-color: var(--color-white);
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 1.25rem;
+}
+.article-card {
+  overflow: hidden;
+  display: flex;
+  flex-direction: column;
+  height: 100%;
+  border-radius: 1.125rem;
+  border: 1px solid var(--color-border-light);
+}
+.article-info {
+  padding: 0.625rem;
+}
+.article-card-info-title {
+  font-size: 20px;
+  font-weight: 700;
+  margin-bottom: 5px;
+  margin-bottom: 10px;
+  line-height: 1.3;
+}
+.article-card-info-description {
+  font-size: 14px;
+  color: #ccc;
+  display: -webkit-box;
+  -webkit-line-clamp: 2;
+  -webkit-box-orient: vertical;
+  overflow: hidden;
+  margin-bottom: 15px;
+}
+.article-card-image-box {
+  height: 13.75rem;
+  width: 100%;
+}
+.article-card-image-box-image {
+  width: 100%;
+  height: 100%;
 }
 
 /* footer */
@@ -394,7 +446,11 @@ overflow: hidden;
   }
 
   .explore-content {
-    grid-template-columns: repeat(2,1fr);
+    grid-template-columns: repeat(2, 1fr);
+  }
+
+  .article-content {
+    grid-template-columns: repeat(2, 1fr);
   }
 }
 
@@ -404,15 +460,18 @@ overflow: hidden;
 
 /* desktop */
 @media screen and (min-width: 768px) {
-    .explore-content {
-    grid-template-columns: repeat(3,1fr);
+  .explore-content {
+    grid-template-columns: repeat(3, 1fr);
   }
 }
 
 /* lg */
 @media screen and (min-width: 990px) {
-    .explore-content {
-    grid-template-columns: repeat(4,1fr);
+  .explore-content {
+    grid-template-columns: repeat(4, 1fr);
+  }
+  .article-content {
+    grid-template-columns: repeat(3, 1fr);
   }
 }
 
