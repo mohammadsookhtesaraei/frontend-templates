@@ -11,6 +11,10 @@
   --color-link-more-item: #eee;
 
   --color-border-top-drop-down-menu:#f8e88b;
+  --color-banner-gradient:linear-gradient(135deg,#21254e,#2b4a83); 
+
+  --color-register-link:#ffd900;
+  --color-login-link:#435a8a;
 }
 
 * {
@@ -235,6 +239,84 @@ header {
   font-size: 0.8rem;
 }
 
+.banner {
+   width: 1050px;
+   padding: 124px 60px 80px;
+   background-image:var(--color-banner-gradient) ;
+   border-radius: 20px;
+   margin: 20px auto;
+   display: flex;
+   justify-content: space-between;
+
+}
+.banner-text h3 {
+   font-family: 'YekanBakhHeavy';
+   font-size: 2rem;
+   color: var(--color-light);
+
+}
+
+.banner-text p {
+   color: var(--color-light);
+   font-size: 1.15rem;
+   margin: 20px 0;
+   line-height: 2.5rem;
+
+}
+.banner-image img {
+   width: 500px;
+}
+
+.banner-booton {
+  margin-top: 60px;
+}
+
+.register {
+  font-size: 1rem;
+  font-family: 'YekanBakhBold';
+  color: var(--color-dark);
+  background-color: var(--color-register-link);
+  padding: 6px 14px;
+  display: inline-block;
+  border: none;
+  border-radius: 10px;
+  margin-left: 10px;
+}
+.login {
+ font-size: 1rem;
+  font-family: 'YekanBakhBold';
+  color: var(--color-light);
+  background-color: var(--color-login-link);
+  padding: 6px 14px;
+  display: inline-block;
+  border: none;
+  border-radius: 10px;
+  
+}
+
+.go-down {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  position: relative;
+  bottom: 58px;
+}
+
+.go-down div {
+   background-image: url("../images/arrowbottom.svg");
+   background-repeat: no-repeat;
+   width: 164px;
+   height: 78px;
+}
+
+
+.go-down img {
+  width: 15px;
+  position: relative;
+  top: -60px;
+}
 @keyframes fadeInDown {
   0% {
     opacity: 0;
@@ -260,6 +342,15 @@ header {
   header {
     width: 940px;
   }
+
+  .banner {
+    width: 900px;
+    padding: 60px 40px 120px;
+  }
+
+  .banner-image img {
+    width: 430px;
+  }
 }
 
 @media screen and (max-width: 990px) {
@@ -279,6 +370,30 @@ header {
   .header-ul li {
     margin: 0 10px;
   }
+
+  .banner {
+    width: auto;
+    padding: 40px 40px 85px;
+    margin-left: 35px;
+    margin-right: 35px;
+  }
+
+  .banner-image img {
+    display: none;
+  }
+
+  .banner-text {
+    text-align: center;
+  }
+
+   .banner-text p {
+    margin: 5px 0;
+    font-size: 1rem;
+   }
+
+   .banner-booton {
+    margin-top:40px ;
+   }
 }
 
 @media screen and (max-width: 768px) {
@@ -293,5 +408,25 @@ header {
 
   .hamburger-icon {
     display: block;
+  }
+
+  .banner {
+    margin-left: 8px;
+    margin-right: 8px;
+  }
+}
+
+@media screen and (max-width:575px) {
+  .banner {
+  padding: 80px 40px;
+  }
+
+  .banner-text h3 {
+  font-size: 1.2rem;
+  text-align: right;
+  }
+
+  .banner-text p {
+    text-align: justify;
   }
 }
