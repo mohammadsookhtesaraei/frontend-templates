@@ -10,11 +10,13 @@
   --color-border-bottom-menu: #dfe1e4;
   --color-link-more-item: #eee;
 
-  --color-border-top-drop-down-menu:#f8e88b;
-  --color-banner-gradient:linear-gradient(135deg,#21254e,#2b4a83); 
+  --color-border-top-drop-down-menu: #f8e88b;
+  --color-banner-gradient: linear-gradient(135deg, #21254e, #2b4a83);
 
-  --color-register-link:#ffd900;
-  --color-login-link:#435a8a;
+  --color-register-link: #ffd900;
+  --color-login-link: #435a8a;
+  --color-title1-peyment-section: #747480;
+  --color-title2-peyment-section: #303030;
 }
 
 * {
@@ -169,7 +171,6 @@ header {
 
 #show-more-menu {
   position: relative;
-
 }
 
 #show-more-menu ul {
@@ -208,12 +209,11 @@ header {
   background-color: var(--color-light);
   display: none;
   justify-content: flex-start;
-   border-top: 5px solid var(--color-border-top-drop-down-menu);
+  border-top: 5px solid var(--color-border-top-drop-down-menu);
   border-radius: 12px;
   width: 372px;
   padding-top: 5px;
   margin-top: 23px;
-
 }
 
 .product-menu a {
@@ -224,10 +224,8 @@ header {
 }
 
 .product-menu a:hover {
-    background-color: var(--color-header-zarinPal-link-bg);
-} 
-
-
+  background-color: var(--color-header-zarinPal-link-bg);
+}
 
 .product-menu a p:first-child {
   color: var(--color-dark);
@@ -240,40 +238,37 @@ header {
 }
 
 .banner {
-   width: 1050px;
-   padding: 124px 60px 80px;
-   background-image:var(--color-banner-gradient) ;
-   border-radius: 20px;
-   margin: 20px auto;
-   display: flex;
-   justify-content: space-between;
-
+  width: 1050px;
+  padding: 124px 60px 80px;
+  background-image: var(--color-banner-gradient);
+  border-radius: 20px;
+  margin: 20px auto;
+  display: flex;
+  justify-content: space-between;
 }
 .banner-text h3 {
-   font-family: 'YekanBakhHeavy';
-   font-size: 2rem;
-   color: var(--color-light);
-
+  font-family: "YekanBakhHeavy";
+  font-size: 2rem;
+  color: var(--color-light);
 }
 
 .banner-text p {
-   color: var(--color-light);
-   font-size: 1.15rem;
-   margin: 20px 0;
-   line-height: 2.5rem;
-
+  color: var(--color-light);
+  font-size: 1.15rem;
+  margin: 20px 0;
+  line-height: 2.5rem;
 }
 .banner-image img {
-   width: 500px;
+  width: 500px;
 }
 
-.banner-booton {
+.banner-bottom {
   margin-top: 60px;
 }
 
 .register {
   font-size: 1rem;
-  font-family: 'YekanBakhBold';
+  font-family: "YekanBakhBold";
   color: var(--color-dark);
   background-color: var(--color-register-link);
   padding: 6px 14px;
@@ -283,15 +278,14 @@ header {
   margin-left: 10px;
 }
 .login {
- font-size: 1rem;
-  font-family: 'YekanBakhBold';
+  font-size: 1rem;
+  font-family: "YekanBakhBold";
   color: var(--color-light);
   background-color: var(--color-login-link);
   padding: 6px 14px;
   display: inline-block;
   border: none;
   border-radius: 10px;
-  
 }
 
 .go-down {
@@ -305,17 +299,92 @@ header {
 }
 
 .go-down div {
-   background-image: url("../images/arrowbottom.svg");
-   background-repeat: no-repeat;
-   width: 164px;
-   height: 78px;
+  background-image: url("../images/arrowbottom.svg");
+  background-repeat: no-repeat;
+  width: 164px;
+  height: 78px;
 }
-
 
 .go-down img {
   width: 15px;
   position: relative;
   top: -60px;
+}
+
+.online-payment {
+  width: 1170px;
+  margin: auto;
+  display: flex;
+  align-items: flex-start;
+  justify-content: space-between;
+}
+.section-image {
+  width: 450px;
+  height: 480px;
+}
+
+.section-text {
+  margin: 30px 0;
+  width: 530px;
+}
+
+.section-text h2 {
+  color: var(--color-title1-peyment-section);
+  font-family: "YekanBakhMedium";
+  font-weight: 500;
+  font-size: 1.4rem;
+  margin: 20px 0 5px;
+}
+
+.section-text h3 {
+  color: var(--color-title2-peyment-section);
+  font-family: "YekanBakhHeavy";
+  font-weight: 600;
+  font-size: 2rem;
+  margin: 5px 0 10px;
+}
+
+.section-text p {
+  color: var(--color-title2-peyment-section);
+  font-family: "YekanBakhMedium";
+  text-align: justify;
+  line-height: 40px;
+  border-bottom: 1px solid var(--color-border-bottom-menu);
+  padding-bottom: 20px;
+  margin-top: 16px;
+}
+
+.section-links {
+  margin-top: 40px;
+  display: flex;
+}
+.first-button {
+  font-size: 0.9rem;
+  font-family: "iranyekanwebmedium";
+  color: var(--color-dark);
+  background-color: var(--color-register-link);
+  padding: 6px 14px;
+  border: none;
+  margin-left: 10px;
+  display: inline-block;
+  border-radius: 10px;
+}
+
+.second-button {
+  display: flex;
+  align-items: center;
+  font-size: 0.9rem;
+  padding: 6px 14px;
+  border-radius: 10px;
+  font-family: "iranyekanwebmedium";
+  color: var(--color-header-zarinPal-link);
+  background-color: var(--color-header-zarinPal-link-bg);
+}
+
+.second-button img {
+  width: 15px;
+  height: 15px;
+  margin-right: 5px;
 }
 @keyframes fadeInDown {
   0% {
@@ -350,6 +419,10 @@ header {
 
   .banner-image img {
     width: 430px;
+  }
+
+  .online-payment {
+    width: 940px;
   }
 }
 
@@ -386,14 +459,24 @@ header {
     text-align: center;
   }
 
-   .banner-text p {
+  .banner-text p {
     margin: 5px 0;
     font-size: 1rem;
-   }
+  }
 
-   .banner-booton {
-    margin-top:40px ;
-   }
+  .banner-bottom {
+    margin-top: 40px;
+  }
+
+  .online-payment {
+    width: auto;
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .section-text {
+    width: 95%;
+  }
 }
 
 @media screen and (max-width: 768px) {
@@ -414,19 +497,43 @@ header {
     margin-left: 8px;
     margin-right: 8px;
   }
+
+  .section-text {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .section-image {
+    width: 460px;
+    height: 480px;
+  }
 }
 
-@media screen and (max-width:575px) {
+@media screen and (max-width: 575px) {
   .banner {
-  padding: 80px 40px;
+    padding: 80px 40px;
   }
 
   .banner-text h3 {
-  font-size: 1.2rem;
-  text-align: right;
+    font-size: 1.2rem;
+    text-align: right;
   }
 
   .banner-text p {
     text-align: justify;
+  }
+
+  .section-image {
+    display: none;
+  }
+
+  .section-text {
+    width: 80%;
+    padding: 0 10px;
+  }
+
+  .section-text h3 {
+    font-size: 1rem;
   }
 }
